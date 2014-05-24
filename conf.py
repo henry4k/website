@@ -100,7 +100,7 @@ NAVIGATION_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "bootstrap3"
+THEME = "paper"
 
 # Below this point, everything is optional
 
@@ -277,7 +277,7 @@ REDIRECTIONS = []
 # And then do a backup, or run `nikola ping` from the `ping`
 # plugin (`nikola install_plugin ping`).
 # To do manual deployment, set it to []
-# DEPLOY_COMMANDS = []
+DEPLOY_COMMANDS = ['rsync -av --delete output/ henry4k:/home/henry/www/site']
 
 # For user.github.io/organization.github.io pages, the DEPLOY branch
 # MUST be 'master', and 'gh-pages' for other repositories.
@@ -695,14 +695,14 @@ COMMENT_SYSTEM_ID = ""
 # Specifying the id for either 'site' or 'creator' will be preferred
 # over the cleartext username. Specifying an ID is not necessary.
 # Displaying images is currently not supported.
-# TWITTER_CARD = {
-#     # 'use_twitter_cards': True,  # enable Twitter Cards
-#     # 'site': '@website',  # twitter nick for the website
-#     # 'site:id': 123456,  # Same as site, but the website's Twitter user ID
-#                           # instead.
-#     # 'creator': '@username',  # Username for the content creator / author.
-#     # 'creator:id': 654321,  # Same as creator, but the Twitter user's ID.
-# }
+TWITTER_CARD = {
+    'use_twitter_cards': True,  # enable Twitter Cards
+    'site': '@henry4kde',  # twitter nick for the website
+    #'site:id': 123456,  # Same as site, but the website's Twitter user ID
+                          # instead.
+    'creator': '@henry4kde',  # Username for the content creator / author.
+    #'creator:id': 654321,  # Same as creator, but the Twitter user's ID.
+}
 
 # If webassets is installed, bundle JS and CSS to make site loading faster
 # USE_BUNDLES = True
