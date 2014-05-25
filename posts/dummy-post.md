@@ -28,6 +28,7 @@ denn das erschwert die Lesbarkeit.
 > Man soll den Tag nicht vor  
 > dem Abend loben.
 
+<!-- TEASER_END -->
 
 
 ### Code Craft

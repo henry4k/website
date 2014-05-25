@@ -95,6 +95,8 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/archive.html", "Archive"),
         ("/categories/index.html", "Tags"),
+        ("/stories/projects.html", "Projects"),
+        ("/stories/about-me.html", "About me"),
         ("/rss.xml", "RSS feed"),
     ),
 }
