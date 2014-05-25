@@ -379,7 +379,7 @@ DEPLOY_COMMANDS = ['rsync -av --delete output/ henry4k:/home/henry/www/site']
 # "assets/css/code.css" this is ignored.
 # Can be any of autumn borland bw colorful default emacs friendly fruity manni
 # monokai murphy native pastie perldoc rrt tango trac vim vs
-# CODE_COLOR_SCHEME = 'default'
+CODE_COLOR_SCHEME = 'monokai'
 
 # If you use 'site-reveal' theme you can select several subthemes
 # THEME_REVEAL_CONFIG_SUBTHEME = 'sky'
@@ -399,7 +399,7 @@ DEPLOY_COMMANDS = ['rsync -av --delete output/ henry4k:/home/henry/www/site']
 # }
 
 # Show only teasers in the index pages? Defaults to False.
-# INDEX_TEASERS = False
+INDEX_TEASERS = True
 
 # HTML fragments with the Read more... links.
 # The following tags exist and are replaced for you:
@@ -562,7 +562,7 @@ COMMENT_SYSTEM_ID = ""
 # done in the code, hope you don't mind ;-)
 # Note: most Nikola-specific extensions are done via the Nikola plugin system,
 #       with the MarkdownExtension class and should not be added here.
-# MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite']
+MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite']
 
 # Social buttons. This is sample code for AddThis (which was the default for a
 # long time). Insert anything you want here, or even make it empty.
@@ -583,7 +583,7 @@ COMMENT_SYSTEM_ID = ""
 
 # Show link to source for the posts?
 # Formerly known as HIDE_SOURCELINK (inverse)
-# SHOW_SOURCELINK = True
+SHOW_SOURCELINK = False
 # Copy the source files for your pages?
 # Setting it to False implies SHOW_SOURCELINK = False
 # COPY_SOURCES = True
