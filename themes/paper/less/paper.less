@@ -1,9 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy);
 
+/*
 @viewport
 {
     minimum-scale: 1.0;
-    width: 600px;
+    width: @desktopMaxWidth;
+}
+*/
+
+@viewport
+{
+    width: device-width;
+    user-zoom: fixed;
 }
 
 body
@@ -20,6 +28,7 @@ body
 h1
 {
     text-align: center;
+    font-size: 50%;
 }
 
 h2, h3, h4
@@ -33,6 +42,12 @@ h2, h3, h4
     text-decoration: none;
 }
 
+#brand
+{
+    font-size: 2em;
+    @media @desktopLayout, @tabletLayout { font-size: 3em; }
+}
+
 #brand :link
 {
     color: inherit;
@@ -41,7 +56,9 @@ h2, h3, h4
 #container
 {
     margin: auto; // center
-    width: 600px;
+    width: @mobileMaxWidth;
+    @media @tabletLayout { width: @tabletMaxWidth; }
+    @media @desktopLayout { width: @desktopMaxWidth; }
 }
 
 .code
