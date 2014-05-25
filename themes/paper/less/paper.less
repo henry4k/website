@@ -1,0 +1,78 @@
+@import url(http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy);
+
+@viewport
+{
+    minimum-scale: 1.0;
+    width: 600px;
+}
+
+body
+{
+    background-color: @paper;
+    text-rendering: optimizeLegibility; /* use kerning */
+    word-wrap: break-word;
+    color: @ink;
+    font-family: Sorts Mill Goudy, sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+h1
+{
+    text-align: center;
+}
+
+h2, h3, h4
+{
+    text-align: left;
+}
+
+:link, :visited, :link:hover, :visited:hover
+{
+    color: @bright-ink;
+    text-decoration: none;
+}
+
+#brand :link
+{
+    color: inherit;
+}
+
+#container
+{
+    margin: auto; // center
+    width: 600px;
+}
+
+.code
+{
+    background-color: #FFFFFF;
+
+    border-width: 1px;
+    border-color: #DDDDDD;
+    border-style: solid;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 10px;
+
+    font-family: monospace;
+    color: #000000;
+}
+
+hr
+{
+    color: @ink;
+}
+
+.metadata
+{
+    text-align: right;
+}
+
+footer
+{
+    text-align: center;
+}
