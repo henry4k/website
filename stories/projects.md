@@ -10,4 +10,4 @@
 
 This page shall give an overview of the major projects in which I am involved.
 
-But at the moment it just displays this useless text, because Henry one lazy fuck.
+But at the moment it just displays this useless text, because Henry is one lazy fuck.
