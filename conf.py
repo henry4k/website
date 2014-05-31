@@ -21,12 +21,12 @@ BLOG_AUTHOR = "Henry K."  # (translatable)
 BLOG_TITLE = "My Nikola Site"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link
-SITE_URL = "http://henry4k.de/"
+SITE_URL = "http://henry4k.de/site/"
 # This is the URL where nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://henry4k.de/"
-BLOG_EMAIL = "henry4k@example.com"
-BLOG_DESCRIPTION = "This is a demo site for Nikola."  # (translatable)
+BLOG_EMAIL = "henrykielmann@gmail.com"
+BLOG_DESCRIPTION = BLOG_TITLE
 
 # Nikola is multilingual!
 #
@@ -95,8 +95,8 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/archive.html", "Archive"),
         ("/categories/index.html", "Tags"),
-        ("/stories/projects.html", "Projects"),
-        ("/stories/about-me.html", "About me"),
+        ("/pages/projects.html", "Projects"),
+        ("/pages/about-me.html", "About me"),
         ("/rss.xml", "RSS feed"),
     ),
 }
@@ -164,7 +164,7 @@ POSTS = (
     ("posts/*.md", "posts", "post.tmpl"),
 )
 PAGES = (
-    ("stories/*.md", "stories", "story.tmpl"),
+    ("pages/*.md", "pages", "story.tmpl"),
 )
 
 # One or more folders containing files to be copied as-is into the output.
@@ -494,7 +494,7 @@ COMMENT_SYSTEM_ID = ""
 # it will instead /foo/default.html => /foo)
 # (Note: This was briefly STRIP_INDEX_HTML in v 5.4.3 and 5.4.4)
 # Default = False
-# STRIP_INDEXES = False
+STRIP_INDEXES = True
 
 # Should the sitemap list directories which only include other directories
 # and no files.
@@ -515,16 +515,16 @@ COMMENT_SYSTEM_ID = ""
 # This can be disabled on a per-page/post basis by adding
 #    .. pretty_url: False
 # to the metadata
-# PRETTY_URLS = False
+PRETTY_URLS = True
 
 # If True, publish future dated posts right away instead of scheduling them.
 # Defaults to False.
-# FUTURE_IS_NOW = False
+# FUTURE_IS_NOW = True
 
 # If True, future dated posts are allowed in deployed output
 # Only the individual posts are published/deployed; not in indexes/sitemap
 # Generally, you want FUTURE_IS_NOW and DEPLOY_FUTURE to be the same value.
-# DEPLOY_FUTURE = False
+# DEPLOY_FUTURE = True
 # If False, draft posts will not be deployed
 # DEPLOY_DRAFTS = True
 
@@ -582,13 +582,14 @@ MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite']
 # <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
 # <!-- End of social buttons -->
 # """
+SOCIAL_BUTTONS_CODE = ''
 
 # Show link to source for the posts?
 # Formerly known as HIDE_SOURCELINK (inverse)
-SHOW_SOURCELINK = False
+# SHOW_SOURCELINK = True
 # Copy the source files for your pages?
 # Setting it to False implies SHOW_SOURCELINK = False
-# COPY_SOURCES = True
+COPY_SOURCES = False
 
 # Modify the number of Post per Index Page
 # Defaults to 10
