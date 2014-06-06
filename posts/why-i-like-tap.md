@@ -17,3 +17,21 @@
 - `echo **/*.t`
 - `prove`
 - `prove --state`
+
+
+Most people use the default result format that their test library provides.
+
+This is often either an JUnit compatible XML or a proprietary format.
+
+Proprietary formats are obviously bad.
+While they're maybe easy to read by humans, machines can't parse them that easy.
+Simply because they're proprietary and though just have a small eco system at best.
+And since you're doing TDD, you *want* the results to be automatically parsed, analyzed and whatnot.
+
+
+
+Just to conclude: A useful format for test results should have these properties:
+
+- simple format: easily parsable by machines
+- eco system: producers, parsers, etc. so you can make use of your test results
+- generic: should not be tailored to a specific language
