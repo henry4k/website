@@ -94,15 +94,15 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/archive.html", "Archive"),
-        ("/categories/index.html", "Tags"),
-        ("/pages/projects.html", "Projects"),
-        ("/pages/about-me.html", "About me"),
+        ("/categories", "Tags"),
+        ("/pages/projects", "Projects"),
+        ("/pages/about-me", "About me"),
         ("/rss.xml", "RSS feed"),
     ),
 }
 
 # Name of the theme to use.
-THEME = "paper"
+THEME = "orbiter"
 
 # Below this point, everything is optional
 
