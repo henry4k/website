@@ -54,6 +54,20 @@ lang="${lang}">
         <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
     %endif
 
+    <script type="text/javascript">
+        window.onload = function()
+        {
+            var backgroundStretch = 20; // in percent
+            var background = document.getElementById("background");
+            background.style.height = ''+(100+backgroundStretch)+'%';
+            window.onscroll = function()
+            {
+                var scrolled = window.scrollY / window.scrollMaxY;
+                background.style.top = '-'+(scrolled*backgroundStretch)+'%';
+            };
+        };
+    </script>
+
     ${extra_head_data}
 </%def>
 
