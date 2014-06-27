@@ -1,13 +1,15 @@
 // Colors
-@blue: rgb(0, 102, 204);
+@interface: rgb(0, 102, 204);
+@interface-light: saturate(lighten(@interface, 30%), 100%);
+@interface-dark: saturate(darken(@interface, 30%), 100%);
 
 @wob-text: white;
-@wob-link-text: desaturate(@blue, 100%);
-@wob-highlighted-text: @blue*2;
+@wob-link-text: desaturate(@interface, 100%);
+@wob-highlighted-text: @interface-light;
 
 @bow-text: black;
-@bow-link-text: desaturate(@blue, 100%);
-@bow-highlighted-text: @blue;
+@bow-link-text: desaturate(@interface, 100%);
+@bow-highlighted-text: @interface;
 
 // Responsive
 @mobileMaxWidth: 100%;

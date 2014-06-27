@@ -18,7 +18,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Henry K."  # (translatable)
-BLOG_TITLE = "My Nikola Site"  # (translatable)
+BLOG_TITLE = "henry4k.de"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link
 SITE_URL = "http://henry4k.de/site/"
