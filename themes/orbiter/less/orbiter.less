@@ -1,3 +1,21 @@
+// vim: set foldmethod=marker:
+
+
+// ----- Generic ----- {{{1
+
+.button(@fg, @bg)
+{
+    color: @fg;
+    padding: 10px;
+    background-color: fadeout(@bg, 50%);
+    border-bottom-color: @fg;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+}
+
+
+// ----- General ----- {{{1
+
 /*
 @viewport
 {
@@ -35,66 +53,6 @@ body
     z-index: -1;
 }
 
-article
-{
-    background-color: white;
-    color: @bow-text;
-    border-radius: 5px;
-    box-shadow: 0 0 10px @blue*2;
-    padding: 1em 3em;
-    margin: 2em 0em;
-}
-
-.postindex article, #header, #footer
-{
-    border: none;
-}
-
-h1
-{
-    text-align: center;
-}
-
-h2, h3, h4
-{
-    text-align: left;
-}
-
-:link, :visited
-{
-    color: @wob-link-text;
-    text-decoration: none;
-}
-
-:link:hover, :visited:hover
-{
-    color: @wob-highlighted-text;
-    text-decoration: underline;
-}
-
-article :link, article :visited
-{
-    color: @bow-link-text;
-    text-decoration: none;
-}
-
-article :link:hover, article :visited:hover
-{
-    color: @bow-highlighted-text;
-    text-decoration: underline;
-}
-
-#brand
-{
-    font-size: 2em;
-    @media @desktopLayout, @tabletLayout { font-size: 3em; }
-}
-
-#brand :link
-{
-    color: inherit;
-}
-
 #container
 {
     margin: auto; // center
@@ -103,35 +61,108 @@ article :link:hover, article :visited:hover
     @media @desktopLayout { width: @desktopMaxWidth; }
 }
 
-.code
+
+
+// ----- Header ----- {{{1
+
+header, #header
 {
-    background-color: #FFFFFF;
+    border: none;
+    text-align: center;
 
-    border-width: 1px;
-    border-color: #DDDDDD;
-    border-style: solid;
+    h1
+    {
+        font-size: 2em;
+        @media @desktopLayout, @tabletLayout { font-size: 3em; }
 
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding: 10px;
+        link
+        {
+            color: inherit;
+        }
+    }
 
-    font-family: monospace;
-    color: #000000;
+    nav
+    {
+        :link, :visited
+        {
+            .button(@interface, @interface-dark);
+        }
+
+        :link:hover, :visited:hover
+        {
+            .button(@interface-light, @interface);
+        }
+    }
 }
 
-hr
+
+// ----- Article ----- {{{1
+
+article
 {
-    color: @wob-text;
+    background-color: white;
+    color: @bow-text;
+    border-radius: 5px;
+    box-shadow: 0 0 10px @interface-light;
+    padding: 1em 3em;
+    margin: 2em 0em;
+
+    h1
+    {
+        text-align: center;
+    }
+
+    h2, h3, h4
+    {
+        text-align: left;
+    }
+
+    :link, :visited
+    {
+        color: @bow-link-text;
+        text-decoration: none;
+    }
+
+    :link:hover, :visited:hover
+    {
+        color: @bow-highlighted-text;
+        text-decoration: underline;
+    }
+
+    hr
+    {
+        color: @wob-text;
+    }
+
+    .metadata
+    {
+        text-align: right;
+    }
+
+    .code
+    {
+        background-color: #FFFFFF;
+
+        border-width: 1px;
+        border-color: #DDDDDD;
+        border-style: solid;
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 10px;
+
+        font-family: monospace;
+        color: #000000;
+    }
 }
 
-.metadata
-{
-    text-align: right;
-}
 
-footer
+// ----- Footer ----- {{{1
+
+footer, #footer
 {
     text-align: center;
+    border: none;
 }
