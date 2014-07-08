@@ -28,6 +28,10 @@ While they're maybe easy to read by humans, machines can't parse them that easy.
 Simply because they're proprietary and though just have a small eco system at best.
 And since you're doing TDD, you *want* the results to be automatically parsed, analyzed and whatnot.
 
+JUnit XML is a better alternative.
+ever tried to
+
+is a pain without apropriate libraries
 
 
 Just to conclude: A useful format for test results should have these properties:

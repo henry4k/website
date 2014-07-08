@@ -31,26 +31,18 @@ especially if you can prevent it easily.
 
 TDD is viral for dynamic languages that have few or no ways to check code before running it.
 But even if compilers of static languages can help you detect faults,  
-they can't detect all of them.  
+they can't detect all of them.
 And they never will.
 Simply because they don't know what you want the computer to do.
 
-That's where (unit) tests come into play.
+That's where unit tests come into play.
 They let you tell the computer how a program should behave.
-
-...
 
 Since they require no human intervention,
 they can be run automatically to prove that your software still works like it should.
 
-...
-
-
-Which leads us to the first rule of TDD:
+Which leads us to the first and most important rule of TDD:
 1. Write tests.
-
-
-
 
 
 ## 
