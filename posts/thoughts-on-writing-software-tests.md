@@ -2,7 +2,7 @@
 .. title: Thoughts on writing software tests
 .. slug: thoughts-on-writing-software-tests
 .. date: 05/30/2014 08:36:47 PM UTC+02:00
-.. tags: testing,programming
+.. tags: testing,programming,draft
 .. link: 
 .. description: 
 .. type: text

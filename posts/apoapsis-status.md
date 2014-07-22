@@ -17,4 +17,4 @@ For Lua you'll find hundreds of community additions.
 For Squirrel you even have to code a module manager by hand.
 
 But since refactoring has been completed now,
-I hope that the project gains some momentum soon again.
+I hope that the project gains soon some momentum again.

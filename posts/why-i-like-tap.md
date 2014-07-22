@@ -2,7 +2,7 @@
 .. title: Why I like TAP
 .. slug: why-i-like-tap
 .. date: 05/30/2014 08:53:39 PM UTC+02:00
-.. tags: testing
+.. tags: testing,draft
 .. link: 
 .. description: 
 .. type: text
