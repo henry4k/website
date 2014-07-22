@@ -13,8 +13,8 @@ But not because I abandoned the project - not at all.
 It's because I recently decided to switch from Squirrel to Lua.
 
 While I like Squirrel, I was unhappy with the lack of an eco system.
-For Lua you'll find hundreds of community additions.
-For Squirrel you even have to code a module manager by hand.
+You'll find hundreds of community additions for Lua,
+while you even have to code a module manager for Squirrel by hand.
 
 But since refactoring has been completed now,
-I hope that the project gains some momentum soon again.
+I hope that the project soon gains some momentum again.

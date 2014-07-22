@@ -10,10 +10,9 @@
 
 Some hints that one may find usefull when beginning with TDD.
 
-I'm currently learning a lot about software testing
-and software crafmaship in general.
-And to safe others from the pitfalls I fell in, I decided to write this article.
-Hope it helps someone! ^^
+I'm currently learning a lot about software testing and software crafmaship
+in general. To safe others from the pitfalls I fell in, I decided
+to write this article. Hope it helps someone! ^^
 
 
 ## Why write tests?
@@ -45,32 +44,51 @@ Which leads us to the first and most important rule of TDD:
 1. Write tests.
 
 
-## 
+## TDD im Alltag
 
-Test-Driven-Development workflow:
+Für mich hat es sich als sinnvoll erwiesen folgendermaßen Vorzugehen:
 
-1. Design the interface
-2. Write tests for that interface => black box testing
-3. Implement the interface
-4. Run tests
+Für jede neue Klasse bzw jedes neue Modul, legst du zuerst den Interface
+fest. Statt diesen dann gleich zu Implementieren, schreibst du zuerst
+Tests, welche sicherstellen, dass der Interface auch so funktioniert
+wie er soll. Damit siehst du auch gleich, ob dein Interface sich
+als praktikabel erweist.
+
+Dies nennt man auch Black-Box testing, weil man nicht die Implementation,
+sondern den Interface eines Modules testet.
+*TODO: Stimmt das?*
+
+Wichtig ist ausserdem, dass Tests immer möglichst simpel gehalten werden,
+denn Tests geben so auch eine Dokumentation bzw. ein Nutzungsbeispiel ab.
+
+Nachdem die Tests nun geschrieben und etwaige Usabillity Probleme behoben
+wurden, kann der Interface implementiert werden.
+Währenddessen kannst du nun jederzeit die Tests laufen lassen und so
+prüfen wie weit deine Interface schon ordnungsgemäß funktioniert.
+
+Man kann das ganze natürlich noch detaillierter Betreiben,
+zum Beispiel indem man einen Iterativen-Ansatz verfolgt.
+Das heisst, das die [...]
 
 
-How to design a test:
+## How to design a test:
 
-Separate a test into several test phases:
+Der Übersicht halber macht es Sinn einen Test in verschiedene Phasen
+zu unterteilen:
 
-1. setup
-2. exercise
-3. verify
-4. cleanup
+1. Setup-Phase:
+   Die für den Test benötigte Umgebung, wird hier initialisiert.
+2. Exercise-Phase:
+   Die zu testende Aktion wird durchgeführt.
+3. Verify-Phase:
+   Prüfen, ob die ausgeführte Aktion das gewünschte Resultat erbracht hat.
+4. Cleanup-Phase:
+   Die von der Testumgebung belegten Ressourcen werden hier wieder
+   freigegeben. Das Test-Framework sollte sicherstellen, dass diese Phase
+   in jedem Fall ausgeführt wird!
 
 Each phase should be easily distinguishable from the other ones.
 
 Tailor your project for testability.
 This is especially an issue for languages like C/C++,
-since programmers tend to use global variables there. (Nah)
-
-...
-
-
-I'll try to keep this post updated as I learn new things on this topic.
+since programmers tend to use global variables there.
