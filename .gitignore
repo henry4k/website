@@ -1,0 +1,9 @@
+/output
+/cache
+.doit.db
+__pycache__
+.DS_Store
+.DS_Store?
+Thumbs.db
+*~
+.directory
