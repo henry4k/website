@@ -25,7 +25,7 @@ SITE_URL = "http://henry4k.de/site/"
 # This is the URL where nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://henry4k.de/"
-BLOG_EMAIL = "henrykielmann@gmail.com"
+BLOG_EMAIL = "henrykielmann removeme at gmail removeme com"
 BLOG_DESCRIPTION = BLOG_TITLE
 
 # Nikola is multilingual!
@@ -93,11 +93,12 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 # (the same way you would do with a (translatable) setting.)
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/archive.html", "Archive"),
-        ("/categories", "Tags"),
-        ("/pages/projects", "Projects"),
-        ("/pages/about-me", "About me"),
-        ("/rss.xml", "RSS feed"),
+        ("/index.html", "home"),
+        ("/pages/projects", "star"),
+        ("/pages/about-me", "user"),
+        ("https://github.com/henry4k", "github-alt"),
+        ("https://twitter.com/henry4kde", "twitter"),
+        ("/rss.xml", "rss"),
     ),
 }
 

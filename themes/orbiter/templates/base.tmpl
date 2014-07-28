@@ -11,14 +11,11 @@ ${base.html_headstart()}
 ${template_hooks['extra_head']()}
 </head>
 <body>
-    <div id="background"/>
-    <div id="container">
-         ${header.html_header()}
-         <main id="content">
-            <%block name="content"></%block>
-         </main>
-         ${footer.html_footer()}
-    </div>
+    ${header.html_header()}
+    <main id="content">
+        <%block name="content"></%block>
+    </main>
+    ${footer.html_footer()}
     ${body_end}
     ${template_hooks['body_end']()}
     ${base.late_load_js()}

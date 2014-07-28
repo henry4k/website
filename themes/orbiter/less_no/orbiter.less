@@ -1,6 +1,5 @@
 // vim: set foldmethod=marker:
 
-
 // ----- Generic ----- {{{1
 
 .button(@fg, @bg)
@@ -15,14 +14,6 @@
 
 
 // ----- General ----- {{{1
-
-/*
-@viewport
-{
-    minimum-scale: 1.0;
-    width: @desktopMaxWidth;
-}
-*/
 
 @viewport
 {
@@ -62,13 +53,14 @@ body
 }
 
 
-
 // ----- Header ----- {{{1
 
-header, #header
+#container header
 {
     border: none;
     text-align: center;
+
+    * { text-decoration: none; }
 
     h1
     {
@@ -83,14 +75,38 @@ header, #header
 
     nav
     {
-        :link, :visited
+        ul
         {
-            .button(@interface, @interface-dark);
+            background-color: fadeout(@interface-dark, 50%);
+            border-bottom-color: @interface-dark;
+            border-bottom-width: 4px;
+            border-bottom-style: solid;
+            border-radius: 5px;
         }
 
-        :link:hover, :visited:hover
+        li
         {
-            .button(@interface-light, @interface);
+            margin-right: 1.5em;
+            height: 100%;
+            display: inline-block;
+
+            a
+            {
+                padding: 5px;
+                display: inline-block;
+                color: @interface;
+                border-bottom-color: @interface;
+                border-bottom-width: 4px;
+                border-bottom-style: solid;
+                margin-bottom: -4px;
+            }
+
+            :link:hover, :visited:hover
+            {
+                color: @interface-light;
+                background-color: fadeout(@interface, 50%);
+                border-bottom-color: @interface-light;
+            }
         }
     }
 }
@@ -100,12 +116,35 @@ header, #header
 
 article
 {
-    background-color: white;
     color: @bow-text;
     border-radius: 5px;
-    box-shadow: 0 0 10px @interface-light;
-    padding: 1em 3em;
+    //box-shadow: 0 0 10px @interface-light;
     margin: 2em 0em;
+
+    header
+    {
+        margin: 0;
+        padding: 1em 3em;
+        background-color: fadeout(@interface-dark, 50%);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .entry-content, .entry-summary
+    {
+        margin: 0;
+        padding: 1em 3em;
+        background-color: white;
+    }
+
+    aside
+    {
+        margin: 0;
+        padding: 1em 3em;
+        background-color: fadeout(@interface-dark, 50%);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
 
     h1
     {

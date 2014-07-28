@@ -2,9 +2,9 @@
 .. title: Writing C/C++ tests with dummy
 .. slug: writing-cc-tests-with-dummy
 .. date: 05/30/2014 10:28:56 PM UTC+02:00
-.. tags: testing,draft
+.. tags: testing
 .. link: 
-.. description: 
+.. description: A tutorial on how to write C++ tests using dummy.
 .. type: text
 -->
 

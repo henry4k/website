@@ -3,9 +3,9 @@
 
 <%def name="html_footer()">
     %if content_footer:
-        <footer id="footer" role="contentinfo">
+        <div class="footer" role="contentinfo">
             <p>${content_footer}</p>
             ${template_hooks['page_footer']()}
-        </footer>
+        </div>
     %endif
 </%def>

@@ -2,9 +2,9 @@
 .. title: Thoughts on writing software tests
 .. slug: thoughts-on-writing-software-tests
 .. date: 05/30/2014 08:36:47 PM UTC+02:00
-.. tags: testing,programming,draft
+.. tags: testing,programming
 .. link: 
-.. description: 
+.. description: Some hints that one may find usefull when beginning with TDD.
 .. type: text
 -->
 

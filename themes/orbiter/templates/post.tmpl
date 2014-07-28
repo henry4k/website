@@ -16,24 +16,22 @@
 </%block>
 
 <%block name="content">
-<article class="post-${post.meta('type')} h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article">
-    ${pheader.html_post_header()}
-    <div class="e-content entry-content" itemprop="articleBody text">
-    ${post.text()}
+    <div class="limited-width entry">
+        ${pheader.html_post_header()}
+        <div class="entry-content">
+            ${post.text()}
+        </div>
+        <div class="entry-footer">
+            ${helper.html_tags(post)}
+            ${helper.html_pager(post)}
+        </div>
+        % if not post.meta('nocomments') and site_has_comments:
+            <div class="comments">
+                <h2>${messages("Comments")}</h2>
+                ${comments.comment_form(post.permalink(absolute=True), post.title(), post._base_path)}
+            </div>
+        % endif
+        ${helper.mathjax_script(post)}
     </div>
-    <aside class="postpromonav">
-    <nav>
-    ${helper.html_tags(post)}
-    ${helper.html_pager(post)}
-    </nav>
-    </aside>
-    % if not post.meta('nocomments') and site_has_comments:
-        <section class="comments">
-        <h2>${messages("Comments")}</h2>
-        ${comments.comment_form(post.permalink(absolute=True), post.title(), post._base_path)}
-        </section>
-    % endif
-    ${helper.mathjax_script(post)}
-</article>
-${comments.comment_link_script()}
+    ${comments.comment_link_script()}
 </%block>
