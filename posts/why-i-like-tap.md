@@ -29,9 +29,17 @@ Simply because they're proprietary and though just have a small eco system at be
 And since you're doing TDD, you *want* the results to be automatically parsed, analyzed and whatnot.
 
 JUnit XML is a better alternative.
-ever tried to
 
+ever tried to
 is a pain without apropriate libraries
+
+It has also the downside that
+- it generates *a lot* of XML noise
+- and if your 
+
+So I wan't to introduce you to TAP.
+While no being wildly used, it has a large eco system.
+
 
 
 Just to conclude: A useful format for test results should have these properties:

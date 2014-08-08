@@ -35,31 +35,34 @@ InlineTest("Identical boxes overlap.", dummySignalSandbox)
 
 ----
 
-Wie man mit Prove und Dummy C und C++ Programme testet:
+How to test C/C++ software with prove and dummy:
 
-Ich gehe davon aus, dass du schon weisst was es mit dem Testen auf sich hat
-und wie man gut testbaren C/C++ Code schreibt.
-[Referenz zu thoughts-on-writing-software-tests]
+I assume that you already know a bit about testing in general and writing
+testable C/C++ code.  [Referenz zu thoughts-on-writing-software-tests]
 
-Zuerst sollte man sich Gedanken über die Organisation der Tests im Dateisystem machen.
-D.h. wo liegen die Tests im Projektverzeichnis und wie sind sie benannt?
+At first you should think about the organization of your tests in your
+source tree. E.g. where are the test files placed and how should they be
+named?
 
-Im Grunde gibt es folgende zwei Varianten:
+In general there are these two approaches:
 
-- Test-Verzeichnis, welches parallel zum Source-Code-Verzeichnis existiert.
-  Für jede Datei im Source-Code-Verzeichnis gibt es idealerweise ein pendant im Test-Verzeichnis.
+- A dedicated test directory, which exists parallel to the source code.
+  For each file in the source code directory, there is ideally has a
+  counterpart in the test directory.
 
-- Tests liegen neben den Modulen, welche sie testen.
-  Neben der Modul `Foo.c` gibt es einen Test namens `FooTest.c`.
+- Tests reside next to the source files they test and are distinguised by
+  a post fix. E.g. if the source file is called `Foo.c` the test could
+  be called `FooTest.c`.
 
-Beide Varianten haben ihre vor und Nachteile, im Grunde würde ich aber die erste empfehlen.
-Bei der Zweiten spart man sich zwar Tipparbeit wenn man zwischen Modul und Test wechseln möchte,
-aber benötigt auch ein mächtigeres Build-System, was Tests und Module auseinanderhalten kann.
+Both variants have their advantages and disadvantages, but if your build
+system is not that mighty you should stick to the first one.
+The second one has just the advantage that it saves you some time when
+switching between module and test.
 
-Unser Beispiel-Projekt schaut also so aus:
+So our example project looks like this:
 
 
-Als Beispiel dient eine Bibliothek, welche den Dateisystemzugriff abstrahiert.
+Our example is a library, which abstracts file system access.
 
     libfilesystem/
         src/
@@ -67,32 +70,35 @@ Als Beispiel dient eine Bibliothek, welche den Dateisystemzugriff abstrahiert.
             Path.c
         test/
 
-Anmerkung:
-Ja ich weiss, dass `prove` standartmäßig `t` als Testordner verwendet.
-Aber ich finde solche Abkürzungen nicht mehr Zeitgemäß.
-Womit ich jetzt aber keineswegs den Wert von Prove herrunterspielen will. :)
+Note:
+Yeah, I know that `prove` uses `t` as default test directory.
+But I think that such abbreviations are not needed anymore.
+Which shall not mean that prove isn't an incredibly powerful tool! :)
 
 
-## Einen Test anlegen
+## Creating a test
 
-Als erstes wollen wir die `basename` Funktion aus dem Path-Modul testen.
+At first we want to test the `basename` function of the path module.
 
-Der entsprechende Header schaut so aus:
+The according header looks like this:
 
 ```c
 #ifndef __LIBFILESYSTEM_PATH_H__
 #define __LIBFILESYSTEM_PATH_H__
 
-//Returns the last path element.
+// Returns the last path element.
 const char* basename( const char* path );
 
 #endif // __LIBFILESYSTEM_PATH_H__
 ```
 
-Die Implementation verschweige ich hier absichtlich,
-denn wir wollen testen, ob die Implementation dem Interface entspricht.
+I intentionally keep quiet about the implementation here,
+since we want to test whether the interface has been implemented correctly,
+right?
 
-Dazu legen wir im test-Verzeichnis, parallel zum src-Verzeichnis, `Path.c` an:
+
+For that we create a file called `Path.c` parallel to the source in our test
+directory:
 
 ```c
 #include <dummy/core.h>

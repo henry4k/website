@@ -17,78 +17,60 @@ to write this article. Hope it helps someone! ^^
 
 ## Why write tests?
 
-Why spend precious time on writing tests
-for code written by a natural programmer talent like you?
+Why spend precious time on writing tests for code written by a natural
+programmer talent like you?  Because even *if* you are expirienced or
+talented, you *will* make mistakes.  -  Everyone make them and you are no
+exception. That's nothing to be ashamed of.  But you should be ashamed if
+you release software that is buggy - especially if you can prevent it easily.
 
-Because even *if* you are expirienced or talented,
-you *will* make mistakes. - Everyone make them and you are no exception.
-
-That's nothing to be ashamed of.
-
-But you should be ashamed if you release software that is buggy -
-especially if you can prevent it easily.
-
-TDD is viral for dynamic languages that have few or no ways to check code before running it.
-But even if compilers of static languages can help you detect faults,  
-they can't detect all of them.
-And they never will.
+TDD is vital for dynamic languages that have few or no ways to check code
+before running it.  But even if compilers of static languages can help you
+detect faults, they can't detect all of them.  And they never will.
 Simply because they don't know what you want the computer to do.
 
-That's where unit tests come into play.
-They let you tell the computer how a program should behave.
-
-Since they require no human intervention,
-they can be run automatically to prove that your software still works like it should.
-
-Which leads us to the first and most important rule of TDD:
-1. Write tests.
+That's where unit tests come into play.  They let you tell the computer how
+a program should behave.  And since they require no human intervention,
+they can be run automatically to prove that your software still works as it
+should.
 
 
-## TDD im Alltag
+## TDD in your workflow.
 
-Für mich hat es sich als sinnvoll erwiesen folgendermaßen Vorzugehen:
+For me, the following procedure has been proven as practical:
 
-Für jede neue Klasse bzw jedes neue Modul, legst du zuerst den Interface
-fest. Statt diesen dann gleich zu Implementieren, schreibst du zuerst
-Tests, welche sicherstellen, dass der Interface auch so funktioniert
-wie er soll. Damit siehst du auch gleich, ob dein Interface sich
-als praktikabel erweist.
+The first thing you should do when creating a new module or class, is
+to lay out (or: design) its interface and maybe even write documentation.
+Now before you implement it, write tests that ensure the implementation
+is correct. By doing that you'll also automatically notice if your
+interface has design (serious) design flaws.
 
-Dies nennt man auch Black-Box testing, weil man nicht die Implementation,
-sondern den Interface eines Modules testet.
-*TODO: Stimmt das?*
+This is also called black box testing, since your tests don't know anything
+about the implementation. And if you ask me, this is the best kind of unit
+test you can create. White box tests have to be adapted for more often,
+even if the interface didn't change at all.
 
-Wichtig ist ausserdem, dass Tests immer möglichst simpel gehalten werden,
-denn Tests geben so auch eine Dokumentation bzw. ein Nutzungsbeispiel ab.
+It's also important, that you try to keep your tests as simple as possible:
+Tests that are easy to understand, make a good usage example.
 
-Nachdem die Tests nun geschrieben und etwaige Usabillity Probleme behoben
-wurden, kann der Interface implementiert werden.
-Währenddessen kannst du nun jederzeit die Tests laufen lassen und so
-prüfen wie weit deine Interface schon ordnungsgemäß funktioniert.
+Now that we've written the tests and fixed eventual usability problems,
+we can start implementing the interface. While writing, you now can
+run the tests anytime to check what parts of your implementation already
+work.
 
-Man kann das ganze natürlich noch detaillierter Betreiben,
-zum Beispiel indem man einen Iterativen-Ansatz verfolgt.
-Das heisst, das die [...]
+Sure, you could put the bar even higher and e.g. follow an iterative
+approach. But thats beyond the scope of this article.
 
 
-## How to design a test:
+## How to design a test?
 
-Der Übersicht halber macht es Sinn einen Test in verschiedene Phasen
-zu unterteilen:
+To keep things clean it makes sense to divide a test into separate phases:
 
-1. Setup-Phase:
-   Die für den Test benötigte Umgebung, wird hier initialisiert.
-2. Exercise-Phase:
-   Die zu testende Aktion wird durchgeführt.
-3. Verify-Phase:
-   Prüfen, ob die ausgeführte Aktion das gewünschte Resultat erbracht hat.
-4. Cleanup-Phase:
-   Die von der Testumgebung belegten Ressourcen werden hier wieder
-   freigegeben. Das Test-Framework sollte sicherstellen, dass diese Phase
-   in jedem Fall ausgeführt wird!
-
-Each phase should be easily distinguishable from the other ones.
-
-Tailor your project for testability.
-This is especially an issue for languages like C/C++,
-since programmers tend to use global variables there.
+1. Setup phase:
+   Here you initialize the environment, that is needed by the test.
+2. Exercise phase:
+   Run the action you want to test here.
+3. Verify phase:
+   Check if the action did what it should *and* did not what it shouldn't.
+4. Cleanup phase:
+   Free the resources used by the test environment.
+   Your test framework should ensure that this phase is executed in any case.
