@@ -14,24 +14,8 @@ to write it down.
 So, what exactly is love?
 Seriously, didn't you ask youself that sometime too?
 
-As a boy, the media suggests me that love is sex.
-And that sex is the ultimate goal in life.
-(At least I interpret it as that way.)
 
-Jungs scheinen die Medien zum Beispiel zu suggerieren, dass Sex die
-ultimative Form von Liebe ist.
-
----
-
-Let me come up with another thesis: (hehe)
-I define define love as [...]
-
----
-
-get along with someone very well
-- no, because you can also love animals or things
-
----
+## Was ist das denn nun?
 
 Stell dir nur mal vor du währst auf einer einsamen Insel gestrandet.
 Nur du und ein Hund hätten überlebt. (Oder eine Katze oder was auch immer.)
@@ -43,20 +27,21 @@ Ich denke das definiert Liebe schon ganz gut.
 Nicht Triebsteuerung, sondern dass man sich um etwas in einem ganz
 besonderem Maße sorgt und mitfühlt.
 
----
 
-Und was ist mit Triebsteuerung?
+## Und was ist mit Triebsteuerung?
+
 Jemand der sexuell sehr attraktiv ist, hat sicherlich keine Probleme einen
 Partner zu finden. Aber ist das langfristig überhaupt so ausschlaggebend?
-Paare dich sich nur wegen ihrer sexuellen Attraktivität 
+Paare dich sich nur wegen ihrer sexuellen Attraktivität [...]
 
 Ich will dir damit nicht sagen, dass Sex schlecht sei.
 Sondern eher, das es in der heutigen Gesellschaft überbewertet wird
 und dass man es einfach als Möglichkeit Spaß zu haben ansehen sollte.
-Nicht mehr, aber auch nicht weniger.
-Ja und Fremdgehen ein ist Vertrauensbruch.
+Nicht mehr und nicht weniger.
+Ja und Fremdgehen ein ist Vertrauensbruch. (<- Umschreiben)
 
----
+
+## Die Medien
 
 Die Medien suggerieren mir, dass ich als Mann umso attraktiver bin,
 je "stärker" ich physikalisch, sozial, interlektuell und sexuell bin.
@@ -72,5 +57,13 @@ Es ist vielmehr die Wechselwirkung zwischen Audienz und den Medien.
 Denn: Die freien Medien senden letztendlich nur das, was die Leute
 sehen wollen, nicht wahr?
 
-Kann natürlich auch sein, dass ich hier nur einen riesen Haufen Müll
-geschrieben habe. Aber trotzdem wollte ich das mal aufgeschrieben haben.
+
+## Fazit
+
+Vielleicht sollte man sich fragen: Würde ich sie/ihn/.. genauso lieben,
+wenn wir niemals Sex haben, uns nichtmal küssen oder berühren könnten?
+Das ist eine schwere Frage, die vieles in Frage stellt,
+aber dir auch viel über die Natur deiner Gefühle für jemanden verrät.
+
+Vielleicht magst du das alles als Müll sehen, vielleicht auch zurecht.
+Aber solange es für einen Denkanstoß reicht, bin ich schon froh darüber.
