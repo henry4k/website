@@ -94,8 +94,8 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/index.html", "home"),
-        ("/pages/projects", "star"),
-        ("/pages/about-me", "user"),
+        ("/pages/projects.html", "star"),
+        ("/pages/about-me.html", "user"),
         ("https://github.com/henry4k", "github-alt"),
         ("https://twitter.com/henry4kde", "twitter"),
         ("/rss.xml", "rss"),
@@ -182,18 +182,19 @@ PAGES = (
 # 'markdown' is MarkDown
 # 'html' assumes the file is html and just copies it
 COMPILERS = {
-    "rest": ('.rst', '.txt'),
-    "markdown": ('.md', '.mdown', '.markdown'),
-    "textile": ('.textile',),
-    "txt2tags": ('.t2t',),
-    "bbcode": ('.bb',),
-    "wiki": ('.wiki',),
-    "ipynb": ('.ipynb',),
+    #"rest": ('.rst', '.txt'),
+    #"markdown": ('.md', '.mdown', '.markdown'),
+    "misaka4k": ('.md', '.mdown', '.markdown'),
+    #"textile": ('.textile',),
+    #"txt2tags": ('.t2t',),
+    #"bbcode": ('.bb',),
+    #"wiki": ('.wiki',),
+    #"ipynb": ('.ipynb',),
     "html": ('.html', '.htm'),
     # PHP files are rendered the usual way (i.e. with the full templates).
     # The resulting files have .php extensions, making it possible to run
     # them without reconfiguring your server to recognize them.
-    "php": ('.php',),
+    #"php": ('.php',),
     # Pandoc detects the input from the source filename
     # but is disabled by default as it would conflict
     # with many of the others.
@@ -565,7 +566,8 @@ COMMENT_SYSTEM_ID = ""
 # done in the code, hope you don't mind ;-)
 # Note: most Nikola-specific extensions are done via the Nikola plugin system,
 #       with the MarkdownExtension class and should not be added here.
-MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite']
+#MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite']
+MARKDOWN_EXTENSIONS = ['EXT_FENCED_CODE', 'EXT_AUTOLINK', 'EXT_STRIKETHROUGH', 'EXT_AUTOLINK', 'HTML_SMARTYPANTS']
 
 # Social buttons. This is sample code for AddThis (which was the default for a
 # long time). Insert anything you want here, or even make it empty.

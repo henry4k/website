@@ -54,13 +54,13 @@ lang="${lang}">
         <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]-->
     %endif
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"/>
 
     <script type="text/javascript">
         $(window).load(function(element)
         {
             var backgroundStretch = 20; // in percent
-            var background = document.getElementById("background");
+            var background = document.getElementById('background');
             background.style.height = ''+(100+backgroundStretch)+'%';
             $(window).scroll(function(element)
             {
