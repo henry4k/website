@@ -402,7 +402,7 @@ CODE_COLOR_SCHEME = 'monokai'
 # }
 
 # Show only teasers in the index pages? Defaults to False.
-INDEX_TEASERS = True
+#INDEX_TEASERS = True
 
 # HTML fragments with the Read more... links.
 # The following tags exist and are replaced for you:
@@ -495,7 +495,7 @@ COMMENT_SYSTEM_ID = ""
 # it will instead /foo/default.html => /foo)
 # (Note: This was briefly STRIP_INDEX_HTML in v 5.4.3 and 5.4.4)
 # Default = False
-STRIP_INDEXES = True
+# STRIP_INDEXES = True
 
 # Should the sitemap list directories which only include other directories
 # and no files.
@@ -516,7 +516,7 @@ STRIP_INDEXES = True
 # This can be disabled on a per-page/post basis by adding
 #    .. pretty_url: False
 # to the metadata
-PRETTY_URLS = True
+# PRETTY_URLS = True
 
 # If True, publish future dated posts right away instead of scheduling them.
 # Defaults to False.

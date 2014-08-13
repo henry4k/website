@@ -1,5 +1,7 @@
+/plugins
 /output
 /cache
+.sass_cache
 .doit.db
 __pycache__
 .DS_Store

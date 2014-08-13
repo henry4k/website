@@ -7,11 +7,11 @@
 
 <div class="entry-index">
 % for post in posts:
-    <a class="entry-preview" href="${post.permalink()}">
-        <img src="posts/${post.meta('slug')}.png"/>
+    <a class="box entry-preview" href="${post.permalink()}">
+        <div class="entry-preview-image" style="background-image: url('/posts/${post.meta('slug')}.png')"></div>
         <div class="entry-preview-text">
-            <div class="entry-title">${post.title()}</div>
-            <div class="entry-description">
+            <div class="entry-preview-title">${post.title()}</div>
+            <div class="entry-preview-description">
                 ${post.description()}
             </div>
         </div>

@@ -4,31 +4,34 @@
 
 
 <%def name="html_post_header()">
-    <div class="entry-header" style="background-image: url('/posts/${post.meta('slug')}.png')">
-        % if title and not post.meta('hidetitle'):
-            <a class="entry-title" href="${post.permalink()}">${title|h}</a>
-        % endif
+    <div class="entry-header">
+        <div class="entry-image" style="background-image: url('/posts/${post.meta('slug')}.png')"></div>
+        <div class="entry-text">
+            % if title and not post.meta('hidetitle'):
+                <a class="entry-title" href="${post.permalink()}">${title|h}</a>
+            % endif
 
-        <div class="entry-meta">
-            % if display_post_author:
-                <div class="author">${post.author()}</div>
-            % endif
-            <div class="date">
-                <div class="date-message">${messages("Publication date")}</div>
-                <div class="date-value">${post.formatted_date(date_format)}</div>
+            <div class="entry-meta">
+                % if display_post_author:
+                    <div class="author">${post.author()}</div>
+                % endif
+                <div class="date">
+                    <div class="date-message">${messages("Publication date")}</div>
+                    <div class="date-value">${post.formatted_date(date_format)}</div>
+                </div>
+                % if not post.meta('nocomments') and site_has_comments:
+                    <div class="comment">${comments.comment_link(post.permalink(), post._base_path)}</div>
+                % endif
+                % if show_sourcelink:
+                    <a class="source" href="${post.source_link()}">${messages("Source")}</a>
+                % endif
+                % if post.meta('link'):
+                    <a class="link" href='${post.meta('link')}'>${messages("Original site")}</a>
+                % endif
+                % if post.description():
+                    <meta name="description" itemprop="description" content="${post.description()}">
+                % endif
             </div>
-            % if not post.meta('nocomments') and site_has_comments:
-                <div class="comment">${comments.comment_link(post.permalink(), post._base_path)}</div>
-            % endif
-            % if show_sourcelink:
-                <a class="source" href="${post.source_link()}">${messages("Source")}</a>
-            % endif
-            % if post.meta('link'):
-                <a class="link" href='${post.meta('link')}'>${messages("Original site")}</a>
-            % endif
-            % if post.description():
-                <meta name="description" itemprop="description" content="${post.description()}">
-            % endif
         </div>
     </div>
 </%def>

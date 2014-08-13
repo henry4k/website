@@ -16,22 +16,14 @@ But at the moment it just displays this useless text, because Henry is one lazy 
 *TODO:*
 
 <div>
- <a href="apoapsis">
-  <img title="Apoapsis - Beep boop" src="/apoapsis.png"/>
- </a>
-
- <a href="apoapsis">
-  <img src="/apoapsis.png"/>
-  Apoapsis - Beep boop
- </a>
-
- <a href="apoapsis">
-  <img src="/apoapsis.png"/>
-  <div>Apoapsis - Beep boop</div>
- </a>
-
- <a href="apoapsis">
-  <img src="/apoapsis.png"/>
-  <i>Apoapsis - Beep boop</i>
- </a>
+  <a class="entry-preview" href="apoapsis">
+    <img src="/apoapsis.png"/>
+    <div class="entry-preview-text">
+      <div class="entry-title">Apoapsis</div>
+      <div class="entry-description">
+        A game about the solitude and survival in a high-tech lump 20 million
+        meters above the earth.
+      </div>
+    </div>
+  </a>
 </div>
