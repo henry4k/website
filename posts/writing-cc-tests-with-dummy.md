@@ -2,7 +2,7 @@
 .. title: Writing C/C++ tests with dummy
 .. slug: writing-cc-tests-with-dummy
 .. date: 05/30/2014 10:28:56 PM UTC+02:00
-.. tags: testing
+.. tags: testing,draft
 .. link: 
 .. description: A tutorial on how to write C++ tests using dummy.
 .. type: text
@@ -10,6 +10,8 @@
 
 A tutorial on how to write C++ tests using dummy.
 Also shows how to face common problems that arise when you try to test C++ code.
+
+<!-- TEASER_END -->
 
 - Dummy boilerplate (Init, AddTest, RunTests)
   - Reporter-Initialization

@@ -2,11 +2,13 @@
 .. title: Why I like TAP
 .. slug: why-i-like-tap
 .. date: 05/30/2014 08:53:39 PM UTC+02:00
-.. tags: testing
+.. tags: testing,draft
 .. link: 
 .. description: Test Anything Protocol could and should be used by way more people.
 .. type: text
 -->
+
+<!-- TEASER_END -->
 
 - language agnostic
 - very simple structure => easy to generate and easy to parse

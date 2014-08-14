@@ -403,7 +403,7 @@ CODE_COLOR_SCHEME = 'monokai'
 # }
 
 # Show only teasers in the index pages? Defaults to False.
-#INDEX_TEASERS = True
+INDEX_TEASERS = True
 
 # HTML fragments with the Read more... links.
 # The following tags exist and are replaced for you:
@@ -420,7 +420,7 @@ CODE_COLOR_SCHEME = 'monokai'
 # 'Read more...' for the index page, if INDEX_TEASERS is True (translatable)
 INDEX_READ_MORE_LINK = '<p class="more"><a href="{link}">{read_more}…</a></p>'
 # 'Read more...' for the RSS_FEED, if RSS_TEASERS is True (translatable)
-RSS_READ_MORE_LINK = '<p><a href="{link}">{read_more}…</a> ({min_remaining_read})</p>'
+RSS_READ_MORE_LINK = '<p><a href="{link}">{read_more}…</a></p>'
 
 # A HTML fragment describing the license, for the sidebar.
 # (translatable)
@@ -435,7 +435,7 @@ LICENSE = ""
 
 # A small copyright notice for the page footer (in HTML).
 # (translatable)
-CONTENT_FOOTER = 'Contents &copy; {date}         <a href="mailto:{email}">{author}</a> - Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         {license}'
+CONTENT_FOOTER = 'Contents &copy; {date} <a href="mailto:{email}">{author}</a> - Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a> {license}'
 
 # Things that will be passed to CONTENT_FOOTER.format().  This is done
 # for translatability, as dicts are not formattable.  Nikola will
@@ -528,7 +528,7 @@ COMMENT_SYSTEM_ID = ""
 # Generally, you want FUTURE_IS_NOW and DEPLOY_FUTURE to be the same value.
 # DEPLOY_FUTURE = True
 # If False, draft posts will not be deployed
-# DEPLOY_DRAFTS = True
+DEPLOY_DRAFTS = False
 
 # Allows scheduling of posts using the rule specified here (new_post -s)
 # Specify an iCal Recurrence Rule: http://www.kanzaki.com/docs/ical/rrule.html

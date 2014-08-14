@@ -2,11 +2,13 @@
 .. title: Blub
 .. slug: blub
 .. date: 05/30/2014 10:23:08 PM UTC+02:00
-.. tags: philosophical
+.. tags: philosophical,draft
 .. link: 
 .. description: 
 .. type: text
 -->
+
+<!-- TEASER_END -->
 
 Wenn ich so durch Twitter u.Ä. stöber fällt mir jedesmal auf,
 das gefühlte 20-30% der Leute dort irgendwie ins LGBT Spektrum fallen.

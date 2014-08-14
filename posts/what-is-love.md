@@ -2,7 +2,7 @@
 .. title: What is love?
 .. slug: what-is-love
 .. date: 05/30/2014 10:23:08 PM UTC+02:00
-.. tags: philosophical
+.. tags: philosophical,draft
 .. link: 
 .. description: 
 .. type: text
@@ -13,6 +13,8 @@ to write it down.
 
 So, what exactly is love?
 Seriously, didn't you ask youself that sometime too?
+
+<!-- TEASER_END -->
 
 
 ## Was ist das denn nun?

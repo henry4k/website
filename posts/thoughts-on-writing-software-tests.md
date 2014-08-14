@@ -14,6 +14,8 @@ I'm currently learning a lot about software testing and software crafmaship
 in general. To safe others from the pitfalls I fell in, I decided
 to write this article. Hope it helps someone! ^^
 
+<!-- TEASER_END -->
+
 
 ## Why write tests?
 
