@@ -8,17 +8,14 @@
 .. type: text
 -->
 
-<img src="/me.png" align="right"/>
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  
-sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  
-sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+<img src="/pages/about-me/me.png" align="right"/>
+So you wanna know what this blog is all about and who is the dude that writes
+all that nonsense? I'm Henry (aka henry4k), a passionate programmer and
+wannabe game developer from north germany.
 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr,  
-sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  
-sed diam voluptua.
+I enjoy being creative and immersing in fantasy worlds, both futuristic and
+medieval ones.  And thats also the reason why I began learning programming
+back then: to create interactive and immersive fantasy worlds.
 
-At vero eos et accusam et justo duo dolores et ea rebum.
 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
+`:wq`

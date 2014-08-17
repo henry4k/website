@@ -21,7 +21,7 @@ BLOG_AUTHOR = "Henry K."  # (translatable)
 BLOG_TITLE = "henry4k.de"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link
-SITE_URL = "http://henry4k.de/site/"
+SITE_URL = "http://henry4k.de/"
 # This is the URL where nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://henry4k.de/"
@@ -281,7 +281,7 @@ REDIRECTIONS = []
 # And then do a backup, or run `nikola ping` from the `ping`
 # plugin (`nikola install_plugin ping`).
 # To do manual deployment, set it to []
-DEPLOY_COMMANDS = ['rsync -av --delete output/ henry4k:/home/henry/www/site']
+DEPLOY_COMMANDS = ['rsync -av --delete output/ henry4k:/home/henry/www']
 
 # For user.github.io/organization.github.io pages, the DEPLOY branch
 # MUST be 'master', and 'gh-pages' for other repositories.

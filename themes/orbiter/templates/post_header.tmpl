@@ -5,7 +5,7 @@
 
 <%def name="html_post_header()">
     <div class="entry-header">
-        <div class="entry-image" style="background-image: url('/posts/${post.meta('slug')}.png')"></div>
+        <div class="entry-image" style="background-image: url('${helper.post_image_url(post)}')"></div>
         <div class="entry-text">
             % if title and not post.meta('hidetitle'):
                 <a class="entry-title" href="${post.permalink()}">${title|h}</a>
@@ -16,8 +16,8 @@
                     <div class="author">${post.author()}</div>
                 % endif
                 <div class="date">
-                    <div class="date-message">${messages("Publication date")}</div>
-                    <div class="date-value">${post.formatted_date(date_format)}</div>
+                    <div class="key">${messages("Publication date")}:</div>
+                    <div class="value">${post.formatted_date(date_format)}</div>
                 </div>
                 % if not post.meta('nocomments') and site_has_comments:
                     <div class="comment">${comments.comment_link(post.permalink(), post._base_path)}</div>
@@ -28,9 +28,18 @@
                 % if post.meta('link'):
                     <a class="link" href='${post.meta('link')}'>${messages("Original site")}</a>
                 % endif
-                % if post.description():
-                    <meta name="description" itemprop="description" content="${post.description()}">
-                % endif
+                <!--
+                % if post.tags:
+                    <div class="entry-tags">
+                        % for i, tag in enumerate(post.tags):
+                            % if i != 0:
+                                ,
+                            % endif
+                            <a class="tag p-category" href="${_link('tag', tag)}" rel="tag">${tag}</a>
+                        % endfor
+                    </div>
+                %endif
+                -->
             </div>
         </div>
     </div>

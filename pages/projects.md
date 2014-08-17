@@ -6,24 +6,19 @@
 .. link: 
 .. description: 
 .. type: text
+.. image: /todo.png
 -->
 
 This page shall give an overview of the major projects in which I am involved.
 
-But at the moment it just displays this useless text, because Henry is one lazy fuck.
+But at the moment it just displays this useless text, because Henry is one
+lazy fuck.
 
 
 *TODO:*
 
-<div>
-  <a class="entry-preview" href="apoapsis">
-    <img src="/apoapsis.png"/>
-    <div class="entry-preview-text">
-      <div class="entry-title">Apoapsis</div>
-      <div class="entry-description">
-        A game about the solitude and survival in a high-tech lump 20 million
-        meters above the earth.
-      </div>
-    </div>
-  </a>
+<div class="box-inset">
+<img src="/pages/apoapsis.png" width="200px"/>
+<div>A game about the solitude and survival in a high-tech lump 20 million
+meters above the earth.</div>
 </div>

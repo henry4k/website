@@ -6,6 +6,7 @@
 .. link: 
 .. description: Statement on the current status of the game Apoapsis.
 .. type: text
+.. image: /pages/apoapsis.png
 -->
 
 At the moment there are few updates on Apoapsis.

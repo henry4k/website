@@ -6,6 +6,7 @@
 .. link: 
 .. description: 
 .. type: text
+.. image: /posts/heart.png
 -->
 
 <!-- TEASER_END -->

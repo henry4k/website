@@ -1,5 +1,6 @@
 ## -*- coding: utf-8 -*-
-<%namespace name="helper" file="index_helper.tmpl"/>
+<%namespace name="index_helper" file="index_helper.tmpl"/>
+<%namespace name="post_helper" file="post_helper.tmpl"/>
 <%namespace name="comments" file="comments_helper.tmpl"/>
 <%inherit file="base.tmpl"/>
 
@@ -8,7 +9,7 @@
 <div class="limited-width entry-index">
 % for post in posts:
     <a class="box entry-preview" href="${post.permalink()}">
-        <div class="entry-preview-image" style="background-image: url('/posts/${post.meta('slug')}.png')"></div>
+        <div class="entry-preview-image" style="background-image: url('${post_helper.post_image_url(post)}')"></div>
         <div class="entry-preview-text">
             <div class="entry-preview-title">${post.title()}</div>
             <div class="entry-preview-description">
@@ -18,7 +19,7 @@
     </a>
 % endfor
 </div>
-${helper.html_pager()}
+${index_helper.html_pager()}
 ${comments.comment_link_script()}
-${helper.mathjax_script(posts)}
+${index_helper.mathjax_script(posts)}
 </%block>

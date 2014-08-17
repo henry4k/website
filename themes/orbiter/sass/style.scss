@@ -134,6 +134,13 @@ body
     color: black;
 }
 
+.box-inset
+{
+    padding: $padding;
+    background-color: lightgrey;
+    box-shadow: inset black $shadow-xy $shadow-blur;
+}
+
 .footer
 {
     padding: 20px;
@@ -243,14 +250,21 @@ body
 {
     display: flex;
     margin-bottom: $padding;
+
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgrey;
 }
 
 .entry-image
 {
+    @media (max-width: $break-small) { display: none; }
+
     flex-basis: 200px;
     flex-grow: 0;
     flex-shrink: 0;
     height: 150px;
+    margin-right: $padding;
 
     //background-image: url('entry-image.png');
     background-size: cover;
@@ -259,7 +273,6 @@ body
 
 .entry-text
 {
-    margin-left: $padding;
     flex-grow: 1;
 
     display: flex;
@@ -287,4 +300,9 @@ body
 
 .entry-content
 {
+}
+
+.entry-content a
+{
+    text-decoration: underline;
 }

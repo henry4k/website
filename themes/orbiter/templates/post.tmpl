@@ -21,17 +21,13 @@
         <div class="entry-content">
             ${post.text()}
         </div>
-        <div class="entry-footer">
-            ${helper.html_tags(post)}
-            ${helper.html_pager(post)}
-        </div>
-        % if not post.meta('nocomments') and site_has_comments:
-            <div class="comments">
-                <h2>${messages("Comments")}</h2>
-                ${comments.comment_form(post.permalink(absolute=True), post.title(), post._base_path)}
-            </div>
-        % endif
-        ${helper.mathjax_script(post)}
     </div>
+    % if not post.meta('nocomments') and site_has_comments:
+        <div class="comments">
+            <h2>${messages("Comments")}</h2>
+            ${comments.comment_form(post.permalink(absolute=True), post.title(), post._base_path)}
+        </div>
+    % endif
     ${comments.comment_link_script()}
+    ${helper.mathjax_script(post)}
 </%block>

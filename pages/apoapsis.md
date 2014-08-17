@@ -20,18 +20,16 @@ You'll need to get your ass up and find a way to escape .. or at least
 to survive in the cold and unforgiving solitude of space.
 
 This game is all about resource management, engineering and
-improvising. Most of the time, there is no way gathering new resources,
-you have to use what you already have. Recycling and foreseeing use of
+improvising.  Most of the time, there is no way gathering new resources -
+you have to use what you already have.  Recycling and economical use of
 resources are taken to a new dimension.
 
-*TODO: 'forseeing' ist sicher nicht richtig so.*
-
 Since this is an open source project I develop in my spare time,
-it certainly wont be of AAA game quality. - Tough I do my best!
+it certainly wont be of AAA game quality.  Though I try to do my best!
 
 Now for the technical part:
 
-The core systems are written in C++, for efficiency. But Lua runs
+The core systems are written in C++, for efficiency.  But Lua runs
 the game logic, so it shouldn't be hard creating new content for it. :)
 
 I'm also toying with an

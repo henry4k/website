@@ -6,6 +6,7 @@
 .. link: 
 .. description: 
 .. type: text
+.. image: /posts/heart.png
 -->
 
 I'm usually thinking alot about such things, but never bothered
