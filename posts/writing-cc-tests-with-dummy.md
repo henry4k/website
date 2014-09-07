@@ -2,13 +2,13 @@
 .. title: Writing C/C++ tests with Dummy
 .. slug: writing-cc-tests-with-dummy
 .. date: 05/30/2014 10:28:56 PM UTC+02:00
-.. tags: testing,draft
+.. tags: testing
 .. link: 
-.. description: A tutorial on how to write C++ tests using Dummy.
+.. description: First part of the tutorial, which shows you the basics.
 .. type: text
 -->
 
-How to test C/C++ software with prove and Dummy:
+## How to test C/C++ software with Prove and Dummy:
 
 I assume that you already know a bit about testing in general and writing
 testable C/C++ code.  [Referenz zu thoughts-on-writing-software-tests]
@@ -85,25 +85,22 @@ int main()
 }
 ```
 
-Dummy ist modular aufgebaut, daher müssen wir zum einen
-die Kernfunktionalität mit `dummy/core.h` einbinden.
-Und dann müssen, je nach Anforderung, noch weitere Module inkludiert
-werden.
+Since Dummys modular design, we first need to include the core functionallity
+with `dummy/core.h`.  Depending on your needs, you probably need to include
+some other modules.
 
-Die Test-Ergebnisse werden durch einen Reporter ausgegeben.
-Reporter werden über Ereignisse von Dummy informiert und erzeugen
-ihrerseits irgendeine Art von Ausgabe.  Zum Beispiel könnten fehlschlagende
-Tests über `stdout` gemeldet werden.  Da wir in diesem Tutorial unseren Test
-von `prove` ausführen lassen, benötigen wir den `tap_reporter` weil `prove`
-`TAP` als Format erwartet.  [Referenz zu testanything.org]
+The test results are created by a reporter.  Dummy informs reporters about
+events, which in turn create some kind of of output.  Failing tests could be
+printed to `stderr` for example.  Since we use `prove` in this tutorial to
+run our test suite, which uses the Test Anything Protocol,
+we need the `tap_reporter`.  [Referenz zu testanything.org]
 
-Damit Dummy Fehler im Programm erkennen kann, ohne gleich komplett
-abzustürzen, verwendet es sogenannte Sandboxen.
-Diese ermöglichen es Dummy beim ausführen eines Tests, Fehler aus
-unterschiedlichen Quellen abzufangen und auszuwerten.
-In diesem Fall benutzen wir die `signal_sandbox`, welche Signale abfängt
-und damit schon so ziemlich alles abdeckt, was in einem C Programm so
-schiefgehen kann.
+To enable Dummy to detect program errors, without crashing immediately,
+it uses so called sandboxes.  These allow Dummy to intercept and analyze
+errors from different sources, while running a test.
+In this case we use the `signal_sandbox`, which can intercept system signals
+what already covers pretty much everything which can go wrong in a C
+program.
 
 ```c
 #include <dummy/core.h>
@@ -114,9 +111,8 @@ schiefgehen kann.
 // ...
 ```
 
-Jetzt geht es daran Dummy zu initialisieren und zu konfigurieren.
-Wir werden uns zuerst einmal ein Minimalbeispiel ansehen,
-damit du besser verstehst wie Dummy funktioniert:
+New we need to initialize and configure Dummy.  At first, we'll just look at
+a minimal example, so you better understand how Dummy works:
 
 ```c
 int main()
@@ -127,18 +123,16 @@ int main()
 }
 ```
 
-Die Schritte dürften recht logisch sein: Zuerst initialisieren wir Dummy
-mit dem TAP Reporter.  Dann registrieren wir unseren Test, dabei geben wir
-neben der eigentlichen Testfunktion einen Namen und die Sandbox an.
-Der Name wird vom Reporter benutzt um den Test besser beschreiben zu können.
-Und zum Schluss werden die Tests ausgeführt, `dummyRunTests` gibt die
-Anzahl der fehlgeschlagenen Tests zurück - praktischerweise kann der Wert
-direkt als Exit-Code benutzt werden.
+The steps should be pretty straigt forward:  At first we initialize Dummy
+with the TAP reporter.  Then we register our test: Beside the function we
+also pass its name and the sandbox it should use.  The name is used by the
+reporter to describe the test later on.  At the end we call `dummyRunTests`,
+which runs the tests.  It returns the amount of failed tests, which can be
+used as exit code.
 
-Es ist jetzt an der Zeit das Programm zu kompilieren und das ganze mal
-auszuprobieren.  Bei `prove` ist es übrigens üblich die Tests auf `.t`
-enden zu lassen, das werde ich hier auch so halten.
-Am Ende sollte es dann etwa so aussehen:
+It's now at the time to compile the program and try it out.
+Tests run by prove usually end with `.t`, we'll da that here too.
+In the end it should look like this:
 
 ```
 > test/Path.t
@@ -146,10 +140,9 @@ Am Ende sollte es dann etwa so aussehen:
 ok 1 Basename
 ```
 
-Nichts großartiges, wir freuen uns dass alles so perfekt funktioniert hat.
-Doch warte, vielleicht erinnerst du dich, dass wir den `BasenameTest` noch
-überhaupt nicht geschrieben haben - da ist nur eine leere Funktion!
-Das ändern wir doch schnell:
+Nothing special - but we're happy that everything worked so perfectly.
+But wait!  Maybe you remember, that we doesn't wrote the `BasenameTest` yet -
+there's just an empty function!  We quickly change that:
 
 ```c
 #include <string.h>
@@ -162,26 +155,25 @@ void BasenameTest()
 }
 ```
 
-Um der Anschaulichkeit willen, machen wir uns es in diesem Fall einfach und
-testen ledeglich, ob `Basename` für eine simple Eingabe das korrekte
-Ergebnis liefert.  Je nachdem ob `Basename` nun korrekt implementiert wurde
-wird unser Test auch bei der zweiten Ausführung erfolgreich durchlaufen.
+In sake of simplicity, we're lazy in this case and just test if `Basename`
+returns the correct result for a simple input.  If you implemented `Basename`
+correctly, the test should pass on its second execution too.
 
-Aktuell haben wir nur ein Modul zu testen - wir könnten also einfach
-jedes mal `test/Path.t` ausführen um zu gucken ob es richtig funktioniert.
-Sobald wir aber mehrere Module haben, macht das ganze keinen Spaß mehr.
-Dazu gibt es `prove`.  Das Tool kommt aus der Perl-Community und existiert
-bereits seit geraumer Zeit.  Daher ist es für alle wichtigen Betriebssysteme
-verfügbar.  `prove` führt nach bestimmten Regeln alle Tests eines Projektes
-aus.
+At the moment we have just a single module to test - so we could just
+run `test/Path.t` every time to check if our code is correct.
+But as soon as we have multiple modules, the whole thing won't be funny
+anymore.  Thats where `prove` saves the day.  The tool automatically runs
+tests in a project and originates from the Perl community.
+Since it already exists for a long time, it's available for all major
+operating systems.
 
-Ein kleines Manko gibt es allerdings: `prove` führt standartmäßig nur
-Perl-Scripte aus.  Wir müssen es erst für die Verwendung mit anderen Sprachen
-konfigurieren.  Dazu rufen wir `prove` einfach mit dem Parameter `--exec ''`
-auf.  Alternativ kann man sich im Projekt- oder im Home-Verzeichnis auch eine
-`.proverc` anlegen, welche `--exec ''` enthält.
+But `prove` runs only Perl scripts by default.  We first need to adapt it to
+be used with other languages.  For that we simple run `prove` with the
+parameter `--exec ''` - which tells it to run all executable files.
+Alternatively you can create a `.proverc` in your project or home directory,
+which contains `--exec ''`.
 
-Bei mir schaut das Ergebnis dann so aus:
+On my machine it looks like that then:
 
 ```
 > prove
@@ -191,6 +183,6 @@ Files=1, Tests=1,  0 wallclock secs ( 0.03 usr  0.00 sys +  0.00 cusr  0.04 csys
 Result: PASS
 ```
 
-Damit haben wir den ersten Teil des Tutorials abgeschlossen.
-Im nächsten Teil erkläre ich dir, wie du mit Dummy schönere Tests schreiben
-kannst - bisher ging es erstmal nur ums Verständnis der API.
+With that we've completed the first part of the tutorial.
+In the next part I'll explain, how you write nicer tests with Dummy - till
+now it was just about the basic API and concepts.
