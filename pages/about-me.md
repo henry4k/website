@@ -8,7 +8,7 @@
 .. type: text
 -->
 
-<img src="/pages/about-me/me.png" align="right"/>
+<img src="/pages/about-me/me.png" align="right" width="initial"/>
 So you wanna know what this blog is all about and who is the dude that writes
 all that nonsense? I'm Henry (aka henry4k), a passionate programmer and
 wannabe game developer from north germany.

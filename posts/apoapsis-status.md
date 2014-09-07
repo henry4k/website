@@ -3,7 +3,7 @@
 .. slug: apoapsis-status
 .. date: 05/30/2014 10:23:08 PM UTC+02:00
 .. tags: apoapsis
-.. link: 
+.. link: http://henry4k.de/pages/apoapsis.html
 .. description: Statement on the current status of the game Apoapsis.
 .. type: text
 .. image: /pages/apoapsis.png

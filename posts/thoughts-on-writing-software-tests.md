@@ -4,13 +4,14 @@
 .. date: 05/30/2014 08:36:47 PM UTC+02:00
 .. tags: testing,programming
 .. link: 
-.. description: Some hints that one may find usefull when beginning with TDD.
+.. description: Some hints that one may find usefull when beginning with test driven development.
 .. type: text
 -->
 
-Some hints that one may find usefull when beginning with TDD.
+Some hints that one may find usefull when beginning with test driven
+development (TDD):
 
-I'm currently learning a lot about software testing and software crafmaship
+I'm currently learning a lot about software testing and software craftmanship
 in general. To safe others from the pitfalls I fell in, I decided
 to write this article. Hope it helps someone! ^^
 
@@ -41,12 +42,12 @@ should.
 For me, the following procedure has been proven as practical:
 
 The first thing you should do when creating a new module or class, is
-to lay out (or: design) its interface and maybe even write documentation.
+to lay out its interface and maybe even write documentation.
 Now before you implement it, write tests that ensure the implementation
 is correct. By doing that you'll also automatically notice if your
-interface has design (serious) design flaws.
+interface has any serious design design flaws.
 
-This is also called black box testing, since your tests don't know anything
+This is called black box testing, since your tests don't know anything
 about the implementation. And if you ask me, this is the best kind of unit
 test you can create. White box tests have to be adapted for more often,
 even if the interface didn't change at all.

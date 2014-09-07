@@ -8,8 +8,8 @@
 .. type: text
 -->
 
-While playing games like [SpaceStation13](http://www.example.com) or
-[Minecraft](http://www.example.com) I always thought that
+While playing games like [SpaceStation13](http://spacestation13.com/about-2/) or
+[Minecraft](https://minecraft.net/) I always thought that
 it would be *really cool* to create something similar too.
 
 So and this is it:
@@ -33,13 +33,13 @@ The core systems are written in C++, for efficiency.  But Lua runs
 the game logic, so it shouldn't be hard creating new content for it. :)
 
 I'm also toying with an
-[cellular automata](http://github.com/henry4k/cellularautomata),
+[cellular automata](http://github.com/henry4k/cellular),
 that can simulate gases, fires and the like to bring the station to life.
 
 This project is still very WIP, but you can follow its process on
-[github](http://github/henry4k/apoapsis) or on
-[twitter](http://www.example.com).
+[github](http://github.com/henry4k/apoapsis) or on
+[twitter](https://twitter.com/henry4kde).
 
 Btw. I'm still looking for volunteers who would like to help:
 Especially a decent graphics artist and a Lua programmer are badly missing.
-If you're interested, just [contact](http://henry4k.de/contact) me.
+If you're interested, just [contact me](http://henry4k.de/pages/about-me.html).
