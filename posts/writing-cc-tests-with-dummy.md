@@ -10,8 +10,9 @@
 
 ## How to test C/C++ software with Prove and Dummy:
 
-I assume that you already know a bit about testing in general and writing
-testable C/C++ code.  [Referenz zu thoughts-on-writing-software-tests]
+I assume that you already
+[know a bit about testing in general](http://henry4k.de/posts/thoughts-on-writing-software-tests.html)
+and writing testable C/C++ code.
 
 <!-- TEASER_END -->
 
@@ -92,8 +93,8 @@ some other modules.
 The test results are created by a reporter.  Dummy informs reporters about
 events, which in turn create some kind of of output.  Failing tests could be
 printed to `stderr` for example.  Since we use `prove` in this tutorial to
-run our test suite, which uses the Test Anything Protocol,
-we need the `tap_reporter`.  [Referenz zu testanything.org]
+run our test suite, which uses the [Test Anything Protocol](http://testanything.org/),
+we need the `tap_reporter`.
 
 To enable Dummy to detect program errors, without crashing immediately,
 it uses so called sandboxes.  These allow Dummy to intercept and analyze
