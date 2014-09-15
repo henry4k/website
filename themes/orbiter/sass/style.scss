@@ -306,3 +306,41 @@ body
 {
     text-decoration: underline;
 }
+
+.entry-content hr
+{
+    border-top-color: lightgrey;
+    border-top-style: solid;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-right-style: none;
+}
+
+.entry-content img.centered
+{
+    margin-left: 10%;
+    width: 80%;
+}
+
+p code, pre
+{
+    font-size: 1.2em;
+
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+    border-radius: $edge-radius;
+}
+
+p code
+{
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+
+pre
+{
+    padding: 0.2em;
+}
