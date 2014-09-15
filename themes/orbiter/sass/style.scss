@@ -253,7 +253,7 @@ body
 
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-bottom-color: lightgrey;
+    border-bottom-color: black;
 }
 
 .entry-image
@@ -307,13 +307,21 @@ body
     text-decoration: underline;
 }
 
-.entry-content hr
+.entry-content hr,
+.entry-content h1,
+.entry-content h2,
+.entry-content h3
 {
-    border-top-color: lightgrey;
-    border-top-style: solid;
-    border-bottom-style: none;
-    border-left-style: none;
-    border-right-style: none;
+    margin-top: 2em;
+    margin-bottom: 1em;
+
+    border-color: grey;
+    border-width: 1px;
+
+    border-bottom-style: solid;
+    border-top-style:    none;
+    border-left-style:   none;
+    border-right-style:  none;
 }
 
 .entry-content img.centered
@@ -325,11 +333,6 @@ body
 p code, pre
 {
     font-size: 1.2em;
-
-    border-style: solid;
-    border-color: lightgrey;
-    border-width: 1px;
-    border-radius: $edge-radius;
 }
 
 p code
@@ -343,4 +346,9 @@ p code
 pre
 {
     padding: 0.2em;
+
+    border-style: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+    border-radius: $edge-radius;
 }
