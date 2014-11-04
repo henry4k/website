@@ -1,11 +1,12 @@
 <!-- 
-.. title: vman
+.. title: Voxel Manager
 .. slug: vman
 .. date: 05/30/2014 10:53:19 PM UTC+02:00
 .. tags: vman
 .. link: 
 .. description: 
 .. type: text
+.. image: /todo.png
 -->
 
 VMan shall become an API for voxel management,

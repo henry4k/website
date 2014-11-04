@@ -8,11 +8,14 @@
 .. type: text
 -->
 
-## How to test C/C++ software with Prove and Dummy:
+## How to test C/C++ software with Prove and Dummy
 
 I assume that you already
 [know a bit about testing in general](http://henry4k.de/posts/thoughts-on-writing-software-tests.html)
-and writing testable C/C++ code.
+and writing testable C/C++ code.  If you don't know Dummy at all,
+I encourage you to take a look at its [project page](/pages/dummy.html)
+and grab you a copy from [github](https://github.com/henry4k/dummy).
+
 
 <!-- TEASER_END -->
 
@@ -86,22 +89,22 @@ int main()
 }
 ```
 
-Since Dummys modular design, we first need to include the core functionallity
+Since Dummy is designed modular, we first need to include the core functionallity
 with `dummy/core.h`.  Depending on your needs, you probably need to include
 some other modules.
 
 The test results are created by a reporter.  Dummy informs reporters about
 events, which in turn create some kind of of output.  Failing tests could be
-printed to `stderr` for example.  Since we use `prove` in this tutorial to
-run our test suite, which uses the [Test Anything Protocol](http://testanything.org/),
-we need the `tap_reporter`.
+printed to `stderr` for example.
+
+As `prove` uses the [Test Anything Protocol](http://testanything), we need
+to include the `tap_reporter` as well.
 
 To enable Dummy to detect program errors, without crashing immediately,
 it uses so called sandboxes.  These allow Dummy to intercept and analyze
 errors from different sources, while running a test.
-In this case we use the `signal_sandbox`, which can intercept system signals
-what already covers pretty much everything which can go wrong in a C
-program.
+In this case we use the `signal_sandbox`, which can intercept system signals.
+That covers already pretty much everything that can go wrong in a C program.
 
 ```c
 #include <dummy/core.h>
@@ -174,7 +177,7 @@ parameter `--exec ''` - which tells it to run all executable files.
 Alternatively you can create a `.proverc` in your project or home directory,
 which contains `--exec ''`.
 
-On my machine it looks like that then:
+On my machine it looks like this then:
 
 ```
 > prove

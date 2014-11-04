@@ -15,10 +15,25 @@ But at the moment it just displays this useless text, because Henry is one
 lazy fuck.
 
 
-*TODO:*
+## Apoapsis
 
-<div class="box-inset">
-<img src="/pages/apoapsis.png" width="200px"/>
-<div>A game about the solitude and survival in a high-tech lump 20 million
-meters above the earth.</div>
-</div>
+A game about the solitude and survival in a high-tech lump 20 million meters
+above the earth.
+
+[go to project page](/pages/apoapsis.html)
+
+
+## Dummy
+
+A game about the solitude and survival in a high-tech lump 20 million meters
+above the earth.
+
+[go to project page](/pages/dummy.html)
+
+
+## Voxel Manager
+
+A game about the solitude and survival in a high-tech lump 20 million meters
+above the earth.
+
+[go to project page](/pages/vman.html)
