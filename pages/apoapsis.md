@@ -12,6 +12,7 @@ While playing games like [SpaceStation13](http://spacestation13.com/about-2/) or
 [Minecraft](https://minecraft.net/) I always thought that
 it would be *really cool* to create something similar too.
 
+
 ## Overall idea and gameplay
 
 You find yourself stuck on a space station orbiting the earth.
@@ -45,6 +46,6 @@ This project is still very WIP, but you can follow its process on
 [twitter](https://twitter.com/henry4kde).
 
 Btw. I'm still looking for volunteers who would like to help:
-Especially a decent graphics artist and a Lua programmer are badly missing.
+Especially a decent graphics artist is badly missing.
 If you're interested, just [contact me](http://henry4k.de/pages/about-me.html).
 `:)`

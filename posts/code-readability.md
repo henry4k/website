@@ -8,12 +8,12 @@
 .. type: text
 -->
 
-<!-- TEASER_END -->
-
 As we all know, code is being read much more often than being written.
 Therefore it's surely a good investion, to write easily readable code ..
 which in turn is also easily understable code.
 Here are some practices that may help you with this task:
+
+<!-- TEASER_END -->
 
 
 Carefully placed empty lines
@@ -70,13 +70,14 @@ Just don't overdo it!  Don't chop your code into tiny paragraphs, this will
 make it worse than without any paragraphs.
 
 
-Intelligentes Einruecken
-------------------------
+Smart Indentation
+-----------------
 
-Bzw wie man durch gutes Einreucken lesbareren code schreiben kann.
+We can recognize repeating patterns quite fast.  If we take advantage of that,
+we're able to write code which can be read faster and therefore can be
+understood easier.
 
-Dass sich hier ein Mehraufwand durchaus lohnen kann, besagt ja schon die Regel,
-dass Code deutlich oefter gelesen als geschrieben wird.
+Lets take a look at the following to code segments:
 
 ```c
 glm::perspective(camera->fieldOfView, camera->aspect, camera->zNear, camera->zFar);
@@ -89,12 +90,15 @@ glm::perspective(camera->fieldOfView,
                  camera->zFar);
 ```
 
-Das Auge kann sich wiederholende Muster schnell erkennen.
-Wenn wir uns das zunutze machen, koennen wir Code schreiben den man schneller
-lesen und dadurch schneller/leichter verstehen kann.
+You'll see, that it takes longer to get the gist of the first segment, than
+of the second one - even though the first segment is technically shorter.
 
-Zudem lassen sich an solchen Stellen die Block-Edit-Modis mancher Editoren
-gut einsetzen.
+Writing code, which is indented like this, takes longer than just writing
+it in a single line - but as code is being read far more often than being
+written is worth the effort.
+*OR: pays of in the end.*
 
-TODO: Ich koennte noch ein paar Bilder erstellen welche die Augenbewegung beim
-lesen von gut und schlecht formatiertem Code darstellt.
+Some editors feature a so called block edit mode, which makes editing such
+code parts much easier.  It allows you to select a two dimensional 'block'
+of text and modify it.  As far as I know, every better code editor can do
+this.
