@@ -1,16 +1,16 @@
 <!-- 
 .. title: Code readability
 .. slug: code-readability
-.. date: 05/30/2014 10:23:08 PM UTC+02:00 # <- THE DATE IS WRONG MAN!
-.. tags: programming,draft
+.. date: 01/08/2015 10:23:08 PM UTC+02:00
+.. tags: programming
 .. link: 
-.. description: 
+.. description: Hints wich help writing code thats easy and fast to read.
 .. type: text
 -->
 
 As we all know, code is being read much more often than being written.
-Therefore it's surely a good investion, to write easily readable code ..
-which in turn is also easily understable code.
+Therefore it's surely good invested time, to write easily readable code -
+which in turn is also easily understandable code.
 Here are some practices that may help you with this task:
 
 <!-- TEASER_END -->
@@ -19,13 +19,10 @@ Here are some practices that may help you with this task:
 Carefully placed empty lines
 ----------------------------
 
-Like with regular text, it makes sense to use divide the code into paragraphs.
-
-Codezeilen, welche eine gemeinsame Aufgabe erledigen, lassen sich als Absatz
-deutlich vom restlichen code abheben.
+Like with regular text, it makes sense to divide the code into paragraphs.
 
 Lines which serve a particular purpose, can be written as a paragraph to
-distinguish them from other lines which have another purpose.
+distinguish them from lines which have another purpose.
 Okay this may sound abstract - lets take a look at this code:
 
 ```lua
@@ -44,9 +41,8 @@ function table.shuffle( values )
 end
 ```
 
-You will agree that its arguably harder to read than this version,
+You will agree that its harder to read than the following version,
 which only contains two more lines:
-*TODO: Arguably*
 
 ```lua
 function table.shuffle( values )
@@ -79,11 +75,11 @@ understood easier.
 
 Lets take a look at the following to code segments:
 
-```c
+```cpp
 glm::perspective(camera->fieldOfView, camera->aspect, camera->zNear, camera->zFar);
 ```
 
-```c
+```cpp
 glm::perspective(camera->fieldOfView,
                  camera->aspect,
                  camera->zNear,
@@ -96,7 +92,6 @@ of the second one - even though the first segment is technically shorter.
 Writing code, which is indented like this, takes longer than just writing
 it in a single line - but as code is being read far more often than being
 written is worth the effort.
-*OR: pays of in the end.*
 
 Some editors feature a so called block edit mode, which makes editing such
 code parts much easier.  It allows you to select a two dimensional 'block'

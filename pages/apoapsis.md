@@ -22,7 +22,7 @@ to survive in the cold and unforgiving solitude of space.
 
 This game is all about resource management, engineering and
 improvising.  Most of the time, there is no way gathering new resources -
-you have to use what you already have.  Recycling and economical use of
+so you have to use whats already there.  Recycling and economical use of
 resources are taken to a new dimension.
 
 Since this is an open source project I develop in my spare time,

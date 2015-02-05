@@ -183,8 +183,8 @@ PAGES = (
 # 'html' assumes the file is html and just copies it
 COMPILERS = {
     #"rest": ('.rst', '.txt'),
-    #"markdown": ('.md', '.mdown', '.markdown'),
-    "misaka4k": ('.md', '.mdown', '.markdown'),
+    "markdown": ('.md', '.mdown', '.markdown'),
+    #"misaka4k": ('.md', '.mdown', '.markdown'),
     #"textile": ('.textile',),
     #"txt2tags": ('.t2t',),
     #"bbcode": ('.bb',),
@@ -281,7 +281,9 @@ REDIRECTIONS = []
 # And then do a backup, or run `nikola ping` from the `ping`
 # plugin (`nikola install_plugin ping`).
 # To do manual deployment, set it to []
-DEPLOY_COMMANDS = ['rsync -av --delete output/ henry4k:/home/henry/www']
+DEPLOY_COMMANDS = {
+    'default': ['rsync -av --delete output/ henry4k.de:/home/henry/www']
+}
 
 # For user.github.io/organization.github.io pages, the DEPLOY branch
 # MUST be 'master', and 'gh-pages' for other repositories.
@@ -383,7 +385,7 @@ DEPLOY_COMMANDS = ['rsync -av --delete output/ henry4k:/home/henry/www']
 # "assets/css/code.css" this is ignored.
 # Can be any of autumn borland bw colorful default emacs friendly fruity manni
 # monokai murphy native pastie perldoc rrt tango trac vim vs
-CODE_COLOR_SCHEME = 'monokai'
+CODE_COLOR_SCHEME = 'default'
 
 # If you use 'site-reveal' theme you can select several subthemes
 # THEME_REVEAL_CONFIG_SUBTHEME = 'sky'
@@ -566,8 +568,8 @@ DEPLOY_DRAFTS = False
 # done in the code, hope you don't mind ;-)
 # Note: most Nikola-specific extensions are done via the Nikola plugin system,
 #       with the MarkdownExtension class and should not be added here.
-#MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite']
-MARKDOWN_EXTENSIONS = ['EXT_FENCED_CODE', 'EXT_AUTOLINK', 'EXT_STRIKETHROUGH', 'EXT_AUTOLINK', 'HTML_SMARTYPANTS']
+MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite']
+#MARKDOWN_EXTENSIONS = ['EXT_FENCED_CODE', 'EXT_AUTOLINK', 'EXT_STRIKETHROUGH', 'EXT_AUTOLINK', 'HTML_SMARTYPANTS']
 
 # Social buttons. This is sample code for AddThis (which was the default for a
 # long time). Insert anything you want here, or even make it empty.

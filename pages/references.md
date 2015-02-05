@@ -51,7 +51,7 @@ environment and normal mapping effects.
 <img src="/pages/references/pixanity-ingame.png" class="centered"/>
 
 One of my bigger projects: A game engine called "Pixanity", which is a word
-play between pixel and insanity. As you can see, I really like flying islands
+play between pixel and insanity.  As you can see, I really like flying islands
 and misterious blue crystals.  Though the engine was never completed, I had a
 fun time programming it and learned a lot.
 
@@ -59,7 +59,7 @@ fun time programming it and learned a lot.
 
 The engines resource management could automatically reload updated textures
 at runtime.  Though this is actually easy to implement, few game engines
-feature it.  Which is [...], if you take into account that it saves artists
+feature it.  Which is kinda sad, if you take into account that it saves artists
 a lot of time and helps them to stay in their workflow.
 
 ---

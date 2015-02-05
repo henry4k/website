@@ -49,8 +49,8 @@ interface has any serious design design flaws.
 
 This is called black box testing, since your tests don't know anything
 about the implementation. And if you ask me, this is the best kind of unit
-test you can create. White box tests have to be adapted for more often,
-even if the interface didn't change at all.
+test you can create.  White box tests, which rely on the implementation,
+have to be adapted far more often, even if the interface didn't change at all.
 
 It's also important, that you try to keep your tests as simple as possible:
 Tests that are easy to understand, make a good usage example.

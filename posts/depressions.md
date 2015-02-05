@@ -2,9 +2,9 @@
 .. title: Depressions
 .. slug: depressions
 .. date: 05/30/2014 10:23:08 PM UTC+02:00
-.. tags: philosophical,draft
+.. tags: philosophical
 .. link: 
-.. description: 
+.. description: About depressions in general, and in particular about my personal ones.
 .. type: text
 -->
 
@@ -27,8 +27,8 @@ sometimes obvious, but sometimes you need learn more about yourself to
 understand it.
 
 Trying directly to solve a depressions cause may seem tempting in the first
-moment, but alas/unfortunately its often not that easy.
-Because you're still depressed, you're still feeling bad.
+moment, but unfortunately its often not that easy.
+Because you're still depressed - you're still feeling bad.
 Which makes greater changes in your life way harder to accomplish.
 So, when facing a depression its probably a good idea to get in lucky mood
 before attempting to overcome it.  This hopefully protects you from

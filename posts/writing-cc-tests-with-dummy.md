@@ -14,7 +14,7 @@ I assume that you already
 [know a bit about testing in general](http://henry4k.de/posts/thoughts-on-writing-software-tests.html)
 and writing testable C/C++ code.  If you don't know Dummy at all,
 I encourage you to take a look at its [project page](/pages/dummy.html)
-and grab you a copy from [github](https://github.com/henry4k/dummy).
+and to grab a copy from [github](https://github.com/henry4k/dummy).
 
 
 <!-- TEASER_END -->
