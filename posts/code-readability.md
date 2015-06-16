@@ -97,3 +97,59 @@ Some editors feature a so called block edit mode, which makes editing such
 code parts much easier.  It allows you to select a two dimensional 'block'
 of text and modify it.  As far as I know, every better code editor can do
 this.
+
+
+Brace placement
+---------------
+
+Okay, this one 
+
+cause we programmers tend to have quite strong opinions about where to place
+opening braces.
+
+But since it fits the topic, I'll put my viewpoint on that here anyway:
+
+
+The argument is, that this form saves a line of code.
+But that sounds like super optimization to me, as all that painstakingly
+saved lines are lost as soon as you write documentation for example.
+
+I mean:  You don't cram your regular text into as few lines as possible either, right?
+
+
+And again - lets take a look at these two code segments:
+
+```tex
+% Reimplement this for a custom background image:
+\setbeamertemplate{GanymedeBackground}{
+  \includegraphics[width=\paperwidth,
+                   height=\paperheight,
+                   keepaspectratio=false]{images/background.png}
+}
+```
+
+```tex
+% Reimplement this for a custom background image:
+\setbeamertemplate{GanymedeBackground}
+{
+  \includegraphics[width=\paperwidth,
+                   height=\paperheight,
+                   keepaspectratio=false]{images/background.png}
+}
+```
+
+
+Conclusion
+----------
+
+It's common belief, that shorter code is easier to understand as you can
+see more of it at the same time.
+
+But thats not unconditionally true.  Otherwise we'd probably minimize our
+code much more aggressive.
+
+While the opposite - bloating code into o
+
+can't be the holy grail either.
+
+The truth probably lies somewhere in between.
