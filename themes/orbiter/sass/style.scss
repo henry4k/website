@@ -1,8 +1,9 @@
 // constants
 $edge-radius: 3px;
-$break-small: 773px;
-$break-large: 1048px;
-$padding: 10px;
+$page-padding: 50px;
+$small-padding: 10px;
+$page-width: 773px;
+$break: $page-width  + 2 * $page-padding;
 $shadow-xy: 0px 1px;
 $shadow-blur: 3px;
 
@@ -44,7 +45,7 @@ body
 {
     margin-left: auto;
     margin-right: auto;
-    @media (min-width: $break-small) { width: $break-small; }
+    @media (min-width: $break) { width: $page-width; }
 }
 
 .header a,
@@ -67,8 +68,10 @@ body
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-end;
-    padding-top: $padding;
+    padding-top:    20px;
     padding-bottom: 20px;
+    padding-left:  $page-padding;
+    padding-right: $page-padding;
     color: white;
     text-shadow: black $shadow-xy $shadow-blur;
 }
@@ -92,7 +95,7 @@ body
 
 .title-quote
 {
-    @media (max-width: $break-small) { display: none; }
+    @media (max-width: $break) { display: none; }
 
     border-left-style: solid;
     border-left-width: 2px;
@@ -128,7 +131,7 @@ body
 .box
 {
     border-radius: $edge-radius;
-    padding: $padding;
+    padding: $small-padding;
     background-color: white;
     box-shadow: black $shadow-xy $shadow-blur;
     color: black;
@@ -136,7 +139,7 @@ body
 
 .box-inset
 {
-    padding: $padding;
+    padding: $small-padding;
     background-color: lightgrey;
     box-shadow: inset black $shadow-xy $shadow-blur;
 }
@@ -165,7 +168,7 @@ body
 
 .entry-index
 {
-    @media (min-width: $break-small) { width: 80%; }
+    @media (min-width: $break) { width: 80%; }
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -201,20 +204,18 @@ body
 
 .entry-preview-image
 {
-    @media (max-width: $break-small) { display: none; }
     flex-basis: 200px;
     flex-grow: 0;
     flex-shrink: 0;
     height: 150px;
 
-    //background-image: url('entry-image.png');
     background-size: cover;
     background-position: center;
 }
 
 .entry-preview-text
 {
-    margin-left: $padding;
+    margin-left: $small-padding;
     min-width: 200px;
 }
 
@@ -233,6 +234,7 @@ body
 .entry
 {
     text-align: left;
+    padding: $page-padding;
 }
 
 .entry a
@@ -249,7 +251,7 @@ body
 .entry-header
 {
     display: flex;
-    margin-bottom: $padding;
+    margin-bottom: $page-padding;
 
     border-bottom-style: solid;
     border-bottom-width: 1px;
@@ -258,15 +260,14 @@ body
 
 .entry-image
 {
-    @media (max-width: $break-small) { display: none; }
+    @media (max-width: $break) { display: none; }
 
     flex-basis: 200px;
     flex-grow: 0;
     flex-shrink: 0;
     height: 150px;
-    margin-right: $padding;
+    margin-right: $small-padding;
 
-    //background-image: url('entry-image.png');
     background-size: cover;
     background-position: center;
 }
