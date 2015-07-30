@@ -148,8 +148,6 @@ see more of it at the same time.
 But thats not unconditionally true.  Otherwise we'd probably minimize our
 code much more aggressive.
 
-While the opposite - bloating code into o
-
-can't be the holy grail either.
+While the opposite can't be the holy grail either.
 
 The truth probably lies somewhere in between.
