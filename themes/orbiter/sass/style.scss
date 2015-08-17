@@ -2,7 +2,7 @@
 $edge-radius: 3px;
 $page-padding: 50px;
 $small-padding: 10px;
-$page-width: 773px;
+$page-width: 577px; // 773px
 $break: $page-width  + 2 * $page-padding;
 $shadow-xy: 0px 1px;
 $shadow-blur: 3px;
@@ -168,7 +168,7 @@ body
 
 .entry-index
 {
-    @media (min-width: $break) { width: 80%; }
+    @media (min-width: $break) { width: 30%; }
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -327,8 +327,8 @@ body
 
 .entry-content img.centered
 {
-    margin-left: 10%;
-    width: 80%;
+    //margin-left: 10%;
+    width: 100%;
 }
 
 p code, pre

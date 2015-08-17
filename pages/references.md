@@ -1,15 +1,15 @@
 <!-- 
-.. title: References (aka the bragging section)
+.. title: References
 .. slug: references
 .. date: 05/25/2014 02:28:07 PM UTC+02:00
 .. tags: 
 .. link: 
 .. description: 
 .. type: text
-.. image: /todo.png
+.. image: /pages/references.png
 -->
 
-This is a small history of my, somewhat failed, carreer as a game programmer.
+Assorted screenshots of some former projects:
 
 ---
 
@@ -73,4 +73,4 @@ other triangles with cute little triangle rockets.
 
 <img src="/pages/references/old2.png" class="centered"/>
 
-It even featured a simple GUI system. \*grins\*
+It even featured a simple GUI system.

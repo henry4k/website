@@ -22,7 +22,4 @@ Speaking of immersion:  Together with my dog, I love to explore the fields
 and forests around my hometown.
 We both enjoy the calm and original beauty nature offers.
 
-As with books and games, I like music which is immersive - which transports
-emotions and thoughts.  Tool and VNV Nation are good examples.
-
 `:wq`

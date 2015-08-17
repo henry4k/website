@@ -407,7 +407,7 @@ REDIRECTIONS = []
 # named `default` will be executed.  You can use as many presets
 # in a `nikola deploy` command as you like.
 DEPLOY_COMMANDS = {
-    'default': ['rsync -av --delete output/ henry4k.de:/home/henry/www']
+    'default': ['rsync -rav --delete-before --delete output/ henry4k.de:/home/henry/www']
 }
 
 # For user.github.io OR organization.github.io pages, the DEPLOY branch
