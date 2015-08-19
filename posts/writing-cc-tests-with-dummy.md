@@ -155,7 +155,8 @@ void BasenameTest()
 {
     const char* result = Basename("foo/bar");
     if(strcmp(result, "bar") != 0)
-        dummyAbortTest(DUMMY_FAIL_TEST, "Basename() returned a wrong result");
+        dummyAbortTest(DUMMY_FAIL_TEST,
+                       "Basename() returned a wrong result");
 }
 ```
 
@@ -183,7 +184,7 @@ On my machine it looks like this then:
 > prove
 ./test/Path.t .. ok
 All tests successful.
-Files=1, Tests=1,  0 wallclock secs ( 0.03 usr  0.00 sys +  0.00 cusr  0.04 csys =  0.07 CPU)
+Files=1, Tests=1,  0 wallclock secs
 Result: PASS
 ```
 
